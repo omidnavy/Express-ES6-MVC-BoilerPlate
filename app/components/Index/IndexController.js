@@ -2,8 +2,8 @@ const BaseController = require('../../core/BaseController');
 
 module.exports = class IndexController extends BaseController {
 
-    constructor(router, basePath) {
-        super(basePath);
+    constructor(router) {
+        super();
         this.router = router;
         this.registerRoutes();
     }
@@ -13,9 +13,8 @@ module.exports = class IndexController extends BaseController {
     }
 
     getHome(req, res) {
-        // this.renderView(res,'./views/index')
+        this.renderView(res, __dirname, 'index')
     }
-
 
 
 };

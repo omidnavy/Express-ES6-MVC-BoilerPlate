@@ -1,39 +1,6 @@
 {
-  "auth": {
-    "login": {
-      "POST": "*",
-      "DELETE": [ "client","translator" ]
-    }
-  },
-  "user":{
-    "*" : ["administrator"],
-    "client": {
-      "":{
-        "PATCH" : ["client","administrator"]
-      },
-      "register": {
-        "POST": "*",
-        "PATCH" : ["client","administrator"]
-      }
-    },
-    "translator": {
-      "":{
-        "PATCH" : ["translator","administrator"]
-      },
-      "register": {
-        "POST": "*",
-        "PATCH" : ["translator","administrator"]
-      }
-    },
-    "change-password" : {
-      "POST": ["client","translator"]
-    },
-    "forget-password" : {
-        "GET": "*",
-        "POST": "*"
-    }
-  },
-  "order":{
-    "*" : "*"
+  "*": "*",
+  "": {
+    "GET": "*"
   }
 }

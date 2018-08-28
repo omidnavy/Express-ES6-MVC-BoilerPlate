@@ -3,7 +3,7 @@ const winston = require(path.join(__dirname,'../../../node_modules/winston'));
 const options = {
     file: {
         level: 'info',
-        filename: path.join(__dirname,'../logs/app.log'),
+        filename: path.join(__dirname,'../../logs/app.log'),
         handleExceptions: true,
         maxsize: 10485760, // 10MB
         maxFiles: 50,

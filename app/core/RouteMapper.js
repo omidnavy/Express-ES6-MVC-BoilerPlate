@@ -12,9 +12,9 @@ module.exports = class RouteMapper {
         fs.readdirSync(path.join(__dirname, '../components')).forEach(function (component) {
             Controller = require(path.join(__dirname, '../components', component, component + 'Controller'));
             router = express.Router();
-            (component === 'Index') ? urlPath = "" : urlPath = component.toString().toLowerCase();
+            (component === 'Index') ? urlPath = "/" : urlPath = component.toString().toLowerCase();
             app.use("/" + urlPath, router);
-            bindControllerRoutes = new Controller(router, urlPath);
+            bindControllerRoutes = new Controller(router);
         });
     }
 };

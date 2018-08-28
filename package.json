@@ -1,28 +1,24 @@
 {
-  "name": "express-4-ecmascript-6-boilerplate",
+  "name": "express-4-ecmascript-6-mvc-boilerplate",
   "version": "1.0.0",
-  "description": "A basic boilerplate of express version 4 with ES6 setup along with babel and gulp",
+  "description": "A basic boilerplate of express version 4 with ES6 without using any transpiler",
   "main": "index.js",
   "scripts": {
     "start": "node ./app/index.js",
+    "start:watch": "nodemon ./app/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shailendra Singh <shailendra.singh.knp@gmail.com>",
+  "author": "Omid Navy <omidnavy@yahoo.com>",
   "license": "ISC",
   "dependencies": {
-    "@grpc/proto-loader": "^0.3.0",
     "body-parser": "^1.15.2",
     "compression": "latest",
     "connect-redis": "^3.3.3",
+    "ejs": "^2.6.1",
     "express": "^4.14.0",
     "express-session": "^1.15.6",
-    "grpc": "^1.13.0",
     "multer": "^1.2.1",
-    "multiparty": "^4.2.1",
-    "mysql": "^2.13.0",
     "redis": "^2.8.0",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.5",
     "winston": "^3.0.0"
   }
 }

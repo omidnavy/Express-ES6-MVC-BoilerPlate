@@ -1,7 +1,8 @@
 /*
+/!*
 Simple MYSQL DB Class using pools and basic query function.
 you can extend this class as you need or change it to another DB
- */
+ *!/
 
 const mysql = require('mysql');
 const config = require('./config/database').development;
@@ -45,12 +46,12 @@ module.exports = class BaseDBModel extends BaseModel {
         super()
     }
 
-    /**
+    /!**
      *
      * @param {string} query
      * @param items
      * @returns {Promise<any>}
-     */
+     *!/
     query(query, items) {
         return new Promise((resolve, reject) => {
             if (typeof items === 'undefined') {
@@ -75,4 +76,4 @@ module.exports = class BaseDBModel extends BaseModel {
     }
 
 
-};
+};*/

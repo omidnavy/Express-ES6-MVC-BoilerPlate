@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 });
 
 server.listen(8080);
-console.log('Server started on localhost:8080\n');
+logger('info','Server started on localhost:8080');
 process.on('uncaughtException', function (err) {
-    console.log(err);
+    logger('error',err);
 });
