@@ -26,13 +26,6 @@ app.use((req, res, next) => {
     res.status(404).send('Not found')
 });
 
-app.use((req, res, next) => {
-    res.status(500);
-    res.render(path.join(__dirname,'core/views/500'), {
-        title: 'Internal Server Error !',
-    });
-});
-
 server.listen(8080);
 logger('info','Server started on localhost:8080');
 process.on('uncaughtException', function (err) {
