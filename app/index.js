@@ -11,13 +11,12 @@ let server = http.createServer(app);
 /**
  * MIDDLEWARE
  ********************* */
-let middleware = new Middleware(app, express);
+new Middleware(app, express);
 
 /**
  * ROUTES
  ********************* */
-let routes = new RouteMapper();
-routes.mapControllers(app);
+new RouteMapper(app);
 
 /**
  * Default Routes

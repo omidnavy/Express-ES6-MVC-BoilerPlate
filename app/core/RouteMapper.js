@@ -4,16 +4,20 @@ const fs = require('fs');
 
 module.exports = class RouteMapper {
 
-    constructor() {
+    constructor(app) {
+        this.app = app;
+        this.mapControllers()
     }
 
-    mapControllers(app) {
+    mapControllers() {
         let Controller, router, urlPath, bindControllerRoutes;
-        fs.readdirSync(path.join(__dirname, '../components')).forEach(function (component) {
+        const self = this;
+        router = express.Router();
+
+        fs.readdirSync(path.join(__dirname, '../components')).forEach((component) => {
             Controller = require(path.join(__dirname, '../components', component, component + 'Controller'));
-            router = express.Router();
             (component === 'Index') ? urlPath = "/" : urlPath = component.toString().toLowerCase();
-            app.use("/" + urlPath, router);
+            self.app.use("/" + urlPath, router);
             bindControllerRoutes = new Controller(router);
         });
     }
